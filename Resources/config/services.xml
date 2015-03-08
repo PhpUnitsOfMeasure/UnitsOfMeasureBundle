@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="php_units_of_measure.registry.class">PhpUnitsOfMeasure\Bundle\UnitsOfMeasureBundle\Quantity\Registry\QuantityRegistry</parameter>
+
+        <parameter key="php_units_of_measure.quantity.definition.integrated.class">PhpUnitsOfMeasure\Bundle\UnitsOfMeasureBundle\Quantity\Definition\IntegratedQuantityDefinition</parameter>
+        <parameter key="php_units_of_measure.quantity.definition.configured.class">PhpUnitsOfMeasure\Bundle\UnitsOfMeasureBundle\Quantity\Definition\ConfiguredQuantityDefinition</parameter>
+        <parameter key="php_units_of_measure.quantity.configured.class">PhpUnitsOfMeasure\Bundle\UnitsOfMeasureBundle\Quantity\ConfiguredQuantity</parameter>
+
+        <parameter key="php_units_of_measure.library.prefix">PhpUnitsOfMeasure\PhysicalQuantity\</parameter>
+    </parameters>
+
+    <services>
+        <service id="php_units_of_measure.quantities" class="%php_units_of_measure.registry.class%"/>
+    </services>
+
+</container>
